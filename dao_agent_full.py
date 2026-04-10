@@ -107,6 +107,15 @@ class DaoAgent:
     
     async def _identify_root(self, user_id: str, question: str) -> str:
         """识别根器"""
+        if not self.memory_palace:
+            # 无记忆宫殿，简单判断
+            if "道" in question or "本质" in question:
+                return "上"
+            elif "如何" in question or "怎么办" in question:
+                return "中"
+            else:
+                return "下"
+        
         # 从记忆宫殿搜索用户历史
         history = self.memory_palace.search(
             query=f"[{user_id}]",
@@ -124,8 +133,11 @@ class DaoAgent:
                     dialogue.append({"question": q})
             
             if dialogue:
-                from root_assessment import assess_by_dialogue
-                return assess_by_dialogue(dialogue).root_type
+                try:
+                    from root_assessment import assess_by_dialogue
+                    return assess_by_dialogue(dialogue).root_type
+                except:
+                    pass
         
         # 无历史记录，通过问题评估
         if "道" in question or "本质" in question:
