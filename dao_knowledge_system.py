@@ -158,7 +158,7 @@ COSMOLOGY = {
     "yinyang": CoreConcept(
         name="阴阳",
         category="宇宙观",
-        definition "宇宙万物的两种基本力量",
+        definition="宇宙万物的两种基本力量",
         explanation="""
 阴阳是宇宙的基本法则：
 1. 一阴一阳之谓道：阴阳交替运行就是道
@@ -229,7 +229,7 @@ PRACTICE_SYSTEM = {
     "jingzuo": CoreConcept(
         name="静坐",
         category="修炼体系",
-        definition "静坐冥想的修炼方法",
+        definition="静坐冥想的修炼方法",
         explanation="""
 静坐是道家的基本修炼方法：
 1. 致虚极：致虚极，守静笃
@@ -386,7 +386,7 @@ IMMORTAL_SYSTEM = {
     "siyu": CoreConcept(
         name="四御",
         category="神仙体系",
-        definition "辅佐三清的四位天帝",
+        definition="辅佐三清的四位天帝",
         explanation="""
 四御是辅佐三清的四位天帝：
 1. 玉皇大帝：总执天道
