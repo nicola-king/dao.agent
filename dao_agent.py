@@ -60,6 +60,14 @@ class DaoAgent:
         # 从问题中提取关键词
         teaching = get_dao_teaching_by_keyword(question)
         
+        # 根据问题类型选择更合适的教导
+        if "压力" in question or "累" in question:
+            teaching = DAO_DE_JING.get("chapter_37", teaching)  # 无为而治
+        elif "迷茫" in question or "意义" in question:
+            teaching = ZHUANG_ZI.get("xiaoyao_you", teaching)  # 逍遥游
+        elif "工作" in question or "事业" in question:
+            teaching = DAO_DE_JING.get("chapter_8", teaching)  # 上善若水
+        
         return {
             "teaching": teaching,
             "psychology": self._select_psychology(question)
