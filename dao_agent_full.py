@@ -39,7 +39,14 @@ class DaoAgent:
         self.created_at = datetime.now()
         
         # 太一记忆宫殿
-        self.memory_palace = TaiyiMemoryPalace()
+        try:
+            sys.path.insert(0, '/home/nicola/.openclaw/workspace/skills/taiyi-memory-palace')
+            from memory_system import TaiyiMemoryPalace
+            self.memory_palace = TaiyiMemoryPalace()
+            print("   ✅ 太一记忆宫殿已加载")
+        except Exception as e:
+            print(f"   ⚠️  太一记忆宫殿加载失败：{e}")
+            self.memory_palace = None
         
         # 自进化数据
         self.evolution_data = {
@@ -197,7 +204,11 @@ class DaoAgent:
         return blessings.get(teaching.name, "道法自然，身心自在。")
     
     async def _store_to_memory(self, user_id: str, question: str, response: str, root_type: str):
-        """存储到记忆宫殿"""
+        """存储到太一记忆宫殿"""
+        if not self.memory_palace:
+            print("   ⚠️  记忆宫殿未加载，跳过存储")
+            return
+        
         # 存储对话
         dialogue = f"[{user_id}] {question} -> {response[:200]}"
         self.memory_palace.remember(
@@ -244,6 +255,17 @@ class DaoAgent:
     
     def get_stats(self) -> Dict:
         """获取系统统计"""
+        if not self.memory_palace:
+            return {
+                "agent_id": self.agent_id,
+                "version": self.version,
+                "total_teachings": self.evolution_data["total_teachings"],
+                "unique_users": len(self.evolution_data["unique_users"]),
+                "breakthroughs": len(self.evolution_data["breakthroughs"]),
+                "root_distribution": self.evolution_data["root_distribution"],
+                "memory_palace": {"total_memories": 0, "status": "not_loaded"},
+            }
+        
         memory_stats = self.memory_palace.get_statistics()
         
         return {
