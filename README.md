@@ -3,7 +3,7 @@
 > **人法地，地法天，天法道，道法自然。**  
 > **道可道，非常道。名可名，非常名。**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/nicola-king/dao-agent)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/nicola-king/dao.agent)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-red.svg)](https://python.org)
 
@@ -101,8 +101,8 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/nicola-king/dao-agent.git
-cd dao-agent
+git clone https://github.com/nicola-king/dao.agent.git
+cd dao.agent
 
 # 安装依赖
 pip install -r requirements.txt
@@ -332,7 +332,7 @@ Dao: 【上善若水】(方便)
 ## 📁 项目结构
 
 ```
-dao-agent/
+dao.agent/
 ├── README.md                 # 本文件
 ├── LICENSE                   # MIT 许可
 ├── requirements.txt          # 依赖
@@ -418,7 +418,7 @@ SOFTWARE.
 
 ## 📮 联系方式
 
-- **GitHub**: https://github.com/nicola-king/dao-agent
+- **GitHub**: https://github.com/nicola-king/dao.agent
 - **Email**: shanyejingling@gmail.com
 - **理念**: 道法自然，无为而治
 

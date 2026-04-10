@@ -24,7 +24,7 @@ class DaoAgent:
     """🌿 Dao.Agent - 道家智慧与心理学融合 Agent"""
     
     def __init__(self):
-        self.agent_id = "dao-agent"
+        self.agent_id = "dao.agent"
         self.version = "1.0.0"
         
         print("🌿 Dao.Agent 已启动")
