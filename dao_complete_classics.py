@@ -293,6 +293,149 @@ QUANZHEN = {
 
 
 # ═══════════════════════════════════════════════════════════
+# 道教经典 (东汉 - 明清)
+# ═══════════════════════════════════════════════════════════
+
+DAOJING_CLASSICS = {
+    # ───────────────────────────────────────────────────────
+    # 《太平经》(东汉)
+    # ───────────────────────────────────────────────────────
+    "taiping_jing": DaoTeaching(
+        name="太平经",
+        source="太平经",
+        period="东汉",
+        core_concept="太平理想",
+        original_text="夫道，乃太平之基也。",
+        translation="道，是天下太平的基础。",
+        application="以道治国，天下太平",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《抱朴子》(东晋·葛洪)
+    # ───────────────────────────────────────────────────────
+    "baopuzi_nei": DaoTeaching(
+        name="抱朴子内篇",
+        source="抱朴子",
+        period="东晋",
+        core_concept="抱朴守真",
+        original_text="抱朴守真，全性保真。",
+        translation="保持朴素的本性，保全真实的自我。",
+        application="保持本真，不为外物所动",
+        essence=True
+    ),
+    
+    "baopuzi_xiushen": DaoTeaching(
+        name="修身养性",
+        source="抱朴子",
+        period="东晋",
+        core_concept="修身之道",
+        original_text="欲求长生者，必欲积善立功。",
+        translation="想要追求长寿的人，必须积累善行功德。",
+        application="行善积德，修身养性",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《云笈七签》(北宋·张君房)
+    # ───────────────────────────────────────────────────────
+    "yunji_qiqian": DaoTeaching(
+        name="云笈七签",
+        source="云笈七签",
+        period="北宋",
+        core_concept="道教总集",
+        original_text="道者，虚无之系，造化之根。",
+        translation="道，是虚无的纲系，造化的根本。",
+        application="理解道的根本，顺应自然",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《太上感应篇》(宋)
+    # ───────────────────────────────────────────────────────
+    "taishang_ganying": DaoTeaching(
+        name="太上感应篇",
+        source="太上感应篇",
+        period="宋",
+        core_concept="因果报应",
+        original_text="祸福无门，惟人自召。善恶之报，如影随形。",
+        translation="祸福没有定数，都是人自己招来的。善恶的报应，如影随形。",
+        application="行善积德，因果自负",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《清静经》(唐)
+    # ───────────────────────────────────────────────────────
+    "qingjing_jing": DaoTeaching(
+        name="清静经",
+        source="清静经",
+        period="唐",
+        core_concept="清静无为",
+        original_text="人能常清静，天地悉皆归。",
+        translation="人能够经常保持清静，天地万物都会归附。",
+        application="清心寡欲，自然和谐",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《阴符经》(唐)
+    # ───────────────────────────────────────────────────────
+    "yinfu_jing": DaoTeaching(
+        name="阴符经",
+        source="阴符经",
+        period="唐",
+        core_concept="天人合一",
+        original_text="观天之道，执天之行，尽矣。",
+        translation="观察天道，遵循天道而行，就足够了。",
+        application="顺应天道，无为而治",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《坐忘论》(唐·司马承祯)
+    # ───────────────────────────────────────────────────────
+    "zuowang_lun": DaoTeaching(
+        name="坐忘论",
+        source="坐忘论",
+        period="唐",
+        core_concept="坐忘境界",
+        original_text="坐忘者，因存想而得道。",
+        translation="坐忘，是通过存想而得道的境界。",
+        application="静坐冥想，忘我得道",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《悟真篇》(宋·张伯端)
+    # ───────────────────────────────────────────────────────
+    "wuzhen_pian": DaoTeaching(
+        name="悟真篇",
+        source="悟真篇",
+        period="宋",
+        core_concept="悟真得道",
+        original_text="人人自有长生药，自是愚迷枉摆抛。",
+        translation="人人自己都有长生之药，只是愚昧迷失而白白抛弃。",
+        application="认识自性，本自具足",
+        essence=True
+    ),
+    
+    # ───────────────────────────────────────────────────────
+    # 《道藏》(明)
+    # ───────────────────────────────────────────────────────
+    "daozang": DaoTeaching(
+        name="道藏总集",
+        source="道藏",
+        period="明",
+        core_concept="道教总汇",
+        original_text="道藏者，道教经典之总汇也。",
+        translation="道藏，是道教经典的总汇。",
+        application="博采众长，取其精华",
+        essence=True
+    ),
+}
+
+# ═══════════════════════════════════════════════════════════
 # 糟粕识别 (去其糟粕)
 # ═══════════════════════════════════════════════════════════
 
@@ -318,6 +461,28 @@ ESSENCE_FALSE = {
         application="❌ 迷信活动，不可取",
         essence=False  # 糟粕
     ),
+    
+    "mixin_lingdan": DaoTeaching(
+        name="灵丹妙药",
+        source="道教方术",
+        period="唐宋",
+        core_concept="迷信丹药",
+        original_text="服食金丹，可以成仙。",
+        translation="服用金丹，可以成仙。",
+        application="❌ 迷信丹药，不可取",
+        essence=False  # 糟粕
+    ),
+    
+    "mixin_zhaomo": DaoTeaching(
+        name="驱鬼降魔",
+        source="道教方术",
+        period="汉唐",
+        core_concept="迷信鬼神",
+        original_text="画符念咒，驱鬼降魔。",
+        translation="画符念咒，驱逐鬼怪，降伏妖魔。",
+        application="❌ 迷信鬼神，不可取",
+        essence=False  # 糟粕
+    ),
 }
 
 
@@ -330,7 +495,7 @@ def get_all_essence_teachings() -> List[DaoTeaching]:
     all_teachings = []
     
     # 合并所有精华教导
-    for collection in [PRE_QIN_DAOISM, HUANG_LAO, WEI_JIN, NEIDAN, QUANZHEN]:
+    for collection in [PRE_QIN_DAOISM, HUANG_LAO, WEI_JIN, NEIDAN, QUANZHEN, DAOJING_CLASSICS]:
         for teaching in collection.values():
             if teaching.essence:
                 all_teachings.append(teaching)
